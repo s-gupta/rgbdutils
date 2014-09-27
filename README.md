@@ -11,6 +11,7 @@ We use the ImageStack library for joint bilateral filtering operations (https://
 !#sh
 cd imagestack
 make all
+```
 
 ### Citing
 
