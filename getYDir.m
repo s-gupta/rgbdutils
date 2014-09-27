@@ -8,6 +8,14 @@ function y = getYDir(N, yDirParam)
 %   y:            Gravity direction
 
 % AUTORIGHTS
+% ---------------------------------------------------------
+% Copyright (c) 2014, Saurabh Gupta
+% 
+% This file is part of the RGBD Utils code and is available 
+% under the terms of the Simplified BSD License provided in 
+% LICENSE. Please retain this notice and LICENSE if you use 
+% this file (or any portion of it) in your project.
+% ---------------------------------------------------------
 
 	y = yDirParam.y0;
 	for i = 1:length(yDirParam.angleThresh),

@@ -3,6 +3,14 @@ function [N b] = computeNormals(X, Y, Z, disparity, missingMap, superpixels, sig
 % The normal at pixel (x,y) is N(x, y, :)'pt + b(x,y) = 0
 
 % AUTORIGHTS
+% ---------------------------------------------------------
+% Copyright (c) 2014, Saurabh Gupta
+% 
+% This file is part of the RGBD Utils code and is available 
+% under the terms of the Simplified BSD License provided in 
+% LICENSE. Please retain this notice and LICENSE if you use 
+% this file (or any portion of it) in your project.
+% ---------------------------------------------------------
 
 	N = NaN([size(Z), 3]);
 	Xf = X; Yf = Y; Zf = Z;
