@@ -1,1 +1,1 @@
-addpath('imagestack/matlab');
+addpath(fullfile(fileparts(mfilename('fullpath')), 'imagestack', 'matlab'));
