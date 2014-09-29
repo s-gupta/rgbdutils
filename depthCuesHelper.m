@@ -80,7 +80,7 @@ function [mcD mcN smcN] = depthCuesHelper(pc, pcf, rr, sigmaSpace, qzc, nori, si
     
     tt = tic();
 		AtA = filterItChopOffIS(cat(3, AtARaw, AtbRaw), pos, Zf, qzc, sigmaDisparity, sigmaSpace);	
-    fprintf('Time for filterItChopOffIS: %0.3f\n', toc(tt));
+    % fprintf('Time for filterItChopOffIS: %0.3f\n', toc(tt));
 		Atb = AtA(:, :, (size(AtARaw,3)+1):end);
 		AtA = AtA(:, :, 1:size(AtARaw,3));
 
@@ -123,7 +123,7 @@ function [mcD mcN smcN] = depthCuesHelper(pc, pcf, rr, sigmaSpace, qzc, nori, si
 
 		mcN(:,:,k) = 1-abs(sum(N{1}.*N{2}, 3));
 		mcD(:,:,k) = sqrt(sum((D{1} - D{2}).^2, 3));
-		fprintf('   .');
+		% fprintf('   .');
 		
 		% Making the normals consistent.
 		for i = 1:2,
@@ -137,7 +137,7 @@ function [mcD mcN smcN] = depthCuesHelper(pc, pcf, rr, sigmaSpace, qzc, nori, si
 		smcN(:,:,k) = sign(sum((N{1}-N{2}).*(cntr{1}-cntr{2}),3));
 		mcD(:,:,k) = mcD(:,:,k).*(mcD(:,:,k) > qZ*1.05);	
 		
-		fprintf('%d ',k);
+		% fprintf('%d ',k);
 	end
 
 	fprintf('\n');
