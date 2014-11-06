@@ -22,7 +22,8 @@ function R = getRMatrix(yi, yf)
 	  ax = cross(yi,yf);
 	  ax = ax./norm(ax);
 	  %Find angle of rotation
-	  phi = acosd(abs(yi'*yf));
+	  % phi = acosd(abs(yi'*yf)); % we dont need to take absolute value here.
+	  phi = acosd(yi'*yf);
   end
 
 	if(abs(phi) > 0.1),
